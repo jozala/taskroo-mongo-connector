@@ -28,7 +28,8 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
-            <!-- Groovy, Spock, Acceptance tests -->
+
+            <!-- Groovy, Spock, Tests -->
             <plugin>
                 <groupId>org.codehaus.gmavenplus</groupId>
                 <artifactId>gmavenplus-plugin</artifactId>
