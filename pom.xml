@@ -4,7 +4,7 @@
 
     <groupId>pl.aetas.gtweb</groupId>
     <artifactId>gtweb-mongo-connector</artifactId>
-    <version>0.3.0</version>
+    <version>0.4.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>gtweb-mongo-connector</name>
