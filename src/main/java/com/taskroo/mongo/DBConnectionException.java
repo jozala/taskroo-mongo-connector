@@ -1,4 +1,4 @@
-package pl.aetas.gtweb.mongo;
+package com.taskroo.mongo;
 
 public class DBConnectionException extends RuntimeException {
 

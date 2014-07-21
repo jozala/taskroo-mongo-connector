@@ -1,7 +1,7 @@
-package pl.aetas.gtweb.mongo.integration
+package com.taskroo.mongo.integration
 
-import pl.aetas.gtweb.mongo.MongoConnector
-import pl.aetas.gtweb.mongo.DBConnectionException
+import com.taskroo.mongo.MongoConnector
+import com.taskroo.mongo.DBConnectionException
 
 class MongoConnectorTest extends GroovyTestCase {
 

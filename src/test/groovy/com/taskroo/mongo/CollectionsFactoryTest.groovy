@@ -1,4 +1,4 @@
-package pl.aetas.gtweb.mongo
+package com.taskroo.mongo
 
 import com.mongodb.DB
 import spock.lang.Specification
