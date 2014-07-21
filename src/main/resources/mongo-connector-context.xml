@@ -6,7 +6,7 @@
 
     <context:component-scan base-package="pl.aetas.gtweb.mongo"/>
 
-    <bean name="gtWebDb" factory-bean="mongoConnector" factory-method="getGtWebDatabase"/>
+    <bean name="taskRooDb" factory-bean="mongoConnector" factory-method="getTaskRooDatabase"/>
 
     <bean name="mongoDbUri" class="java.lang.String">
         <constructor-arg value="mongodb://localhost" />

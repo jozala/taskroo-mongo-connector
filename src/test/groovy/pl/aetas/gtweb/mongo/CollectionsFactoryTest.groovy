@@ -15,7 +15,7 @@ class CollectionsFactoryTest extends Specification {
 
     }
 
-    def "should retrieve collection from GtWeb database"() {
+    def "should retrieve collection from TaskRoo database"() {
         when:
         collectionsFactory.getCollection('someCollection')
         then:

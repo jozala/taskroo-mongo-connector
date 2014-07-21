@@ -33,7 +33,7 @@ public class MongoConnector {
         }
     }
 
-    public DB getGtWebDatabase() {
-        return getDatabase("gtweb");
+    public DB getTaskRooDatabase() {
+        return getDatabase("taskroo");
     }
 }

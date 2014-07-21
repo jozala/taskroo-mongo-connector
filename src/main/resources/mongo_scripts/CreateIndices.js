@@ -1,4 +1,4 @@
-var db = connect("localhost:27017/gtweb");
+var db = connect("localhost:27017/taskroo");
 
 // TTL for session to expire after given time
 db.sessions.dropIndex({ "last_accessed_time": 1 });

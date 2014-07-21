@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>pl.aetas.gtweb</groupId>
-    <artifactId>gtweb-mongo-connector</artifactId>
+    <artifactId>taskroo-mongo-connector</artifactId>
     <version>0.4.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>gtweb-mongo-connector</name>
+    <name>taskroo-mongo-connector</name>
     <url>http://www.aetas.pl</url>
 
     <properties>
@@ -17,7 +17,7 @@
     </properties>
 
     <build>
-        <finalName>gtweb-mongo-connector</finalName>
+        <finalName>taskroo-mongo-connector</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -96,7 +96,7 @@
                     <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
                     <branch>refs/heads/mvn-repo</branch>
                     <includes><include>**/*</include></includes>
-                    <repositoryName>gtweb-mongo-connector</repositoryName>
+                    <repositoryName>taskroo-mongo-connector</repositoryName>
                     <repositoryOwner>maniekq</repositoryOwner>
                 </configuration>
                 <executions>
