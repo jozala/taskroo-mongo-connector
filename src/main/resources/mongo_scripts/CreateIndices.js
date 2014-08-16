@@ -1,8 +1,8 @@
 var db = connect("localhost:27017/taskroo");
 
-// TTL for session to expire after given time
-db.sessions.dropIndex({ "last_accessed_time": 1 });
-db.sessions.ensureIndex({"last_accessed_time": 1}, {expireAfterSeconds: 3600});
+// TTL for security tokens to expire after given time
+db.securityTokens.dropIndex({ "last_accessed_time": 1 });
+db.securityTokens.ensureIndex({"last_accessed_time": 1}, {expireAfterSeconds: 3600});
 
 // TTL for rememberMeToken to expire after given time
 db.rememberMeTokens.dropIndex({ "create_time": 1 });
