@@ -21,4 +21,9 @@ class MongoConnectorTest extends GroovyTestCase {
         mongoConnector = new MongoConnector('mongodb://localhost')
         assert mongoConnector.getTaskRooDatabase() != null
     }
+
+    void testShouldReturnJongo() {
+        mongoConnector = new MongoConnector('mongodb://localhost')
+        assert mongoConnector.getJongoTaskRooDatabase() != null
+    }
 }

@@ -5,6 +5,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jongo.Jongo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,5 +36,9 @@ public class MongoConnector {
 
     public DB getTaskRooDatabase() {
         return getDatabase("taskroo");
+    }
+
+    public Jongo getJongoTaskRooDatabase() {
+        return new Jongo(getTaskRooDatabase());
     }
 }

@@ -7,6 +7,7 @@
     <context:component-scan base-package="com.taskroo.mongo"/>
 
     <bean name="taskRooDb" factory-bean="mongoConnector" factory-method="getTaskRooDatabase"/>
+    <bean name="jongoTaskRooDb" factory-bean="mongoConnector" factory-method="getJongoTaskRooDatabase"/>
 
     <bean name="mongoDbUri" class="java.lang.String">
         <constructor-arg value="mongodb://localhost" />
