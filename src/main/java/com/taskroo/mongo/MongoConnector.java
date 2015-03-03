@@ -2,7 +2,6 @@ package com.taskroo.mongo;
 
 import com.mongodb.DB;
 import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jongo.Jongo;
@@ -14,11 +13,13 @@ import java.net.UnknownHostException;
 @Service
 public class MongoConnector {
 
-    private final String mongoUri;
+    private final String mongoDbHost;
+    private final int mongoDbPort;
 
     @Autowired
-    public MongoConnector(String mongoDbUri) {
-        this.mongoUri = mongoDbUri;
+    public MongoConnector(String mongoDbHost, String mongoDbPort) {
+        this.mongoDbHost = mongoDbHost;
+        this.mongoDbPort = Integer.parseInt(mongoDbPort);
     }
 
     private Logger LOGGER = LogManager.getLogger();
@@ -26,10 +27,10 @@ public class MongoConnector {
     public DB getDatabase(String dbName) {
 
         try {
-            MongoClient mongoClient = new MongoClient(new MongoClientURI(mongoUri));
+            MongoClient mongoClient = new MongoClient(mongoDbHost, mongoDbPort);
             return mongoClient.getDB(dbName);
         } catch (UnknownHostException e) {
-            LOGGER.fatal("Cannot connect to MongoDB on {}. App is not able to work.", mongoUri);
+            LOGGER.fatal("Cannot connect to MongoDB on {}:{}. App is not able to work.", mongoDbHost, mongoDbPort);
             throw new DBConnectionException("Cannot connect to MongoDB", e);
         }
     }

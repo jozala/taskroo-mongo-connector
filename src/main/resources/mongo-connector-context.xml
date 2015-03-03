@@ -9,8 +9,12 @@
     <bean name="taskRooDb" factory-bean="mongoConnector" factory-method="getTaskRooDatabase"/>
     <bean name="jongoTaskRooDb" factory-bean="mongoConnector" factory-method="getJongoTaskRooDatabase"/>
 
-    <bean name="mongoDbUri" class="java.lang.String">
-        <constructor-arg value="mongodb://localhost" />
+    <bean name="mongoDbHost" class="java.lang.String">
+        <constructor-arg value="#{systemEnvironment['MONGO_PORT_27017_TCP_ADDR']}" />
+    </bean>
+
+    <bean name="mongoDbPort" class="java.lang.String">
+        <constructor-arg value="#{systemEnvironment['MONGO_PORT_27017_TCP_PORT']}" />
     </bean>
 
 </beans>

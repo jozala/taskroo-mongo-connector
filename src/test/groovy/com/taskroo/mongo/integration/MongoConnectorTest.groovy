@@ -9,7 +9,7 @@ class MongoConnectorTest extends GroovyTestCase {
     private MongoConnector mongoConnector
 
     void testShouldThrowDbExceptionWhenUnableToConnectToDb() {
-        mongoConnector = new MongoConnector('mongodb://incorrectHostname')
+        mongoConnector = new MongoConnector('incorrectHostname', '27017')
 
         assert shouldFail(DBConnectionException.class, {
             mongoConnector.getTaskRooDatabase();
@@ -18,12 +18,12 @@ class MongoConnectorTest extends GroovyTestCase {
     }
 
     void testShouldReturnDbWhenCorrectHostnameGiven() {
-        mongoConnector = new MongoConnector('mongodb://localhost')
+        mongoConnector = new MongoConnector('localhost', '27017')
         assert mongoConnector.getTaskRooDatabase() != null
     }
 
     void testShouldReturnJongo() {
-        mongoConnector = new MongoConnector('mongodb://localhost')
+        mongoConnector = new MongoConnector('localhost', '27017')
         assert mongoConnector.getJongoTaskRooDatabase() != null
     }
 }
