@@ -3,11 +3,9 @@
   <groupId>com.taskroo</groupId>
   <artifactId>taskroo-mongo-connector</artifactId>
   <versioning>
-    <release>0.5.0</release>
     <versions>
-      <version>0.5.0-SNAPSHOT</version>
-      <version>0.5.0</version>
+      <version>0.6.0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20140928215927</lastUpdated>
+    <lastUpdated>20150303214453</lastUpdated>
   </versioning>
 </metadata>
